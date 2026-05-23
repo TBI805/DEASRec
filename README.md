@@ -1,13 +1,10 @@
 # DEASRec
 
-**Purify and Generalize: Efficient Dual-End Adapters for Sequential Recommendation**
+**Purify and Generalize: Efficient Dual-End Adapters for Sequential Recommendation** (KDD 2026)
 
 This repository contains implementation of DEASRec built on the RecBole framework.
 
-## Features
-
-- **Built on RecBole**: Uses the powerful and extensible RecBole recommendation framework
-- **Easy to Use**: Simple configuration and training interface
+![overall](img/overall.png)
 
 ### Requirements
 
@@ -15,28 +12,42 @@ This repository contains implementation of DEASRec built on the RecBole framewor
 - PyTorch >= 1.10.0
 - See `requirements.txt` for complete dependencies
 
-- Download datasets from "[Google Drive](https://drive.google.com/drive/folders/1ahiLmzU7cGRPXf5qGMqtAChte2eYp9gI)". Put the files in ./dataset/
 
 ## Quick Start
 
 ### Dataset
 
-Download the processed datasets from Recbole Library "[Google Drive](https://drive.google.com/drive/folders/1ahiLmzU7cGRPXf5qGMqtAChte2eYp9gI)". Put the files in ./dataset/
+This project evaluates the **DEASRec** model on the following benchmark datasets:
+
+* **Amazon_ratings**:
+	* **Beauty**
+	* **Sports & Outdoors**
+	* **Video Games**
+	* **Toys & Games**
+
+You can download the processed datasets from RecBole Library "[Google Drive](https://drive.google.com/drive/folders/1ahiLmzU7cGRPXf5qGMqtAChte2eYp9gI)" and place the files in `./dataset/`.
 
 ### Basic Usage
-
-```python
-
-# Run DEASRec with default configuration
-run_recbole(model='DEASRec', dataset='ml-100k')
-```
 
 Then run:
 
 ```bash
-python run_recbole.py
+python run_recbole.py --model=DEASRec --dataset=beauty
 ```
 
 ## Acknowledgments
 
 This implementation is based on the [RecBole](https://github.com/RUCAIBox/RecBole) recommendation library. We appreciate their outstanding work.
+
+## Citation
+
+If you find this work useful, please cite it as:
+
+```bibtex
+@inproceedings{deasrec2026,
+	title={Purify and Generalize: Efficient Dual-End Adapters for Sequential Recommendation},
+	author={Hu, Juntao and Zhou, Wei and Shen, Huayi and Wen, Junhao and Zhang, Hongyu},
+	booktitle={Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+	year={2026}
+}
+```
