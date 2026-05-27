@@ -35,6 +35,18 @@ Then run:
 python run_recbole.py --model=DEASRec --dataset=beauty
 ```
 
+### Optimal Hyperparameters (SASRec Backbone)
+
+The following are the best hyperparameter settings of DEASRec across datasets (without search space):
+
+| Parameter | Sports | Video | Toys | Beauty |
+| --- | ---: | ---: | ---: | ---: |
+| Number of Subspaces $G$ | 4 | 8 | 8 | 2 |
+| KL Regularization $\lambda_{KL}$ | 0.01 | 0.01 | 0.01 | 0.01 |
+| $\ell_2$ Regularization $\lambda_{\ell_2}$ | 5e-4 | 1e-4 | 1e-4 | 5e-5 |
+| Max Noise Scale $\sigma_{\max}$ | 1.0 | 1.0 | 1.0 | 1.5 |
+| Modulation Scale $\epsilon$ | 0.3 | 0.5 | 0.4 | 0.5 |
+
 ## Acknowledgments
 
 This implementation is based on the [RecBole](https://github.com/RUCAIBox/RecBole) recommendation library. We appreciate their outstanding work.
