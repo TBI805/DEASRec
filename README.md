@@ -37,7 +37,7 @@ python run_recbole.py --model=DEASRec --dataset=beauty
 
 ### Optimal Hyperparameters (SASRec Backbone)
 
-The following are the best hyperparameter settings of DEASRec across datasets (without search space):
+The following are the best hyperparameter settings of DEASRec across datasets:
 
 | Parameter | Sports | Video | Toys | Beauty |
 | --- | ---: | ---: | ---: | ---: |
