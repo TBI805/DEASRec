@@ -47,6 +47,24 @@ The following are the best hyperparameter settings of DEASRec across datasets:
 | Max Noise Scale $\sigma_{\max}$ | 1.0 | 1.0 | 1.0 | 1.5 |
 | Modulation Scale $\epsilon$ | 0.3 | 0.5 | 0.4 | 0.5 |
 
+### Run Commands with Best Hyperparameters
+
+The following commands use `run_recbole.py` directly and append dataset-specific best hyperparameters:
+
+```bash
+# Sports
+python run_recbole.py --model=DEASRec --dataset=amazon-sports-outdoors --num_subspaces=4 --lambda_kl=0.01 --l2_reg_weight=5e-4 --max_noise_scale=1.0 --epsilon=0.3
+
+# Video
+python run_recbole.py --model=DEASRec --dataset=amazon-video-games --num_subspaces=8 --lambda_kl=0.01 --l2_reg_weight=1e-4 --max_noise_scale=1.0 --epsilon=0.5
+
+# Toys
+python run_recbole.py --model=DEASRec --dataset=amazon-toys-games --num_subspaces=8 --lambda_kl=0.01 --l2_reg_weight=1e-4 --max_noise_scale=1.0 --epsilon=0.4
+
+# Beauty
+python run_recbole.py --model=DEASRec --dataset=amazon-beauty --num_subspaces=2 --lambda_kl=0.01 --l2_reg_weight=5e-5 --max_noise_scale=1.5 --epsilon=0.5
+```
+
 ## Acknowledgments
 
 This implementation is based on the [RecBole](https://github.com/RUCAIBox/RecBole) recommendation library. We appreciate their outstanding work.
